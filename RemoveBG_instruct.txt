@@ -1,0 +1,26 @@
+Remove Background Automatically
+	Tech Used
+	-python
+	-rembg
+	-PIL
+	-easygui
+1. Create/locate a folder for the photos
+2. Move images to folder.
+3. From CMD line, verify up to date Python and install rembg and easygui using pip.
+	$py -VV
+	$pip install rembg
+	$pip install easygui
+4. From IDE, write the code.
+	$from rembg import remove
+	$from PIL import Image
+	$import easygui as eg
+	$input_path = eg.fileopenbox(title="Select image file")
+	$output_path = eg.filesavebox(title="Save file to..")
+	$input = Image.open(input_path)
+	$output = remove(input)
+	$output.save(output_path)
+5. Save file as background_remover.py and run from location file.
+6. Select photo to have background removed.
+7. Save photo under new name and .png extension. 
+8. Enjoy!*
+*If an error occurs, try installing u2net, saving it to your destination folder, and running the application again.
